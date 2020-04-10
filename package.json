@@ -1,0 +1,31 @@
+{
+  "name": "react-node-boilerplate",
+  "version": "1.0.0",
+  "description": "React boilerplate code with Node server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd client && npm start\" \"nodemon server.js\"",
+    "predeploy": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danov6/react-node-boilerplate.git"
+  },
+  "author": "danov6",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danov6/react-node-boilerplate/issues"
+  },
+  "homepage": "https://github.com/danov6/react-node-boilerplate#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "colors": "^1.4.0",
+    "concurrently": "^5.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7"
+  }
+}
