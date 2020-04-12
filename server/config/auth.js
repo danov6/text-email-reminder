@@ -26,11 +26,11 @@ module.exports = (() => {
             // 2. No user was found
             console.log("===== user is good to register =====".green);
             var pw = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(8));
-            // Create the user object and save into database
+            // Create the user object and save into database (hash the password)
             var user = new User({
               name: req.body.name,
               email: req.body.email,
-              password: pw
+              password: pw,
             });
             user.save((err) => {
               if (err) {
@@ -44,7 +44,6 @@ module.exports = (() => {
         }
       });
     },
-
     login: (req, res) => {
       console.log("In the login method ---> users controller".cyan);
       console.log(req.body);

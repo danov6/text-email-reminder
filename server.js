@@ -11,21 +11,24 @@ app.use(bodyParser.json());
 
 require('colors');
 
-//If production, uncomment
-app.use(express.static(path.join(__dirname, '/client/build')));
-
-//If dev, comment
-app.use(express.static(path.join(__dirname, '/client')));
-
 app.use('/api', expressJwt({
     secret: secret
 }));
 
+//Authentication
+let auth = require('./server/config/auth')(jwt, secret);
+
 //Database
-require('./server/config/mongoose.js');
+require('./server/config/mongoose');
 
 //Routes
-require('./server/config/routes.js')(app);
+require('./server/config/routes')(app,auth);
+
+//If production, uncomment
+//app.use(express.static(path.join(__dirname, '/client/build')));
+
+//If dev, comment
+app.use(express.static(path.join(__dirname, '/client')));
 
 //Listen
 app.listen(PORT, function() {
