@@ -1,4 +1,4 @@
-var users = require('./../controllers/users.js');
+var users = require('./auth.js/index.js.js');
 
 // Define the routes
 module.exports = (app, auth) => {

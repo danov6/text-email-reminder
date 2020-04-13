@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+body{
+  background-color: #333;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input:active, input:focus{
+  outline: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root > div {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+#login_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 450px;
+  margin-top: 2%;
+}
+#login_container > * {
+  justify-content: center;
+}
+#login_container > input {
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 2%;
+  padding: 2%;
+  font-size: 1.2em;
+  text-align: left;
+}
+#account_controls{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+#account_controls > button{
+  background-color: #000;
+  color: #fff;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  border: 1px solid #000;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#account_controls > button:hover{
+  background-color: #fff;
+  color: #000;
+}
+#account_controls > button:focus,
+#account_controls > button:active{
+  outline: none;
 }
