@@ -1,2 +1,1 @@
-# react-node-boilerplate
-ReactJS boilerplate code with Node Server
+# JWT login with email and text message reminders
