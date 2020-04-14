@@ -1,7 +1,7 @@
 var users = require('./auth.js/index.js.js');
 
 // Define the routes
-module.exports = (app, auth) => {
+module.exports = (app, auth, path) => {
   // User routes
   app.post('/signup', (req, res) => {
     auth.signup(req, res);
@@ -16,4 +16,7 @@ module.exports = (app, auth) => {
   app.post('/api/edit-reminder', (req,res) => {
     reminders.update(req,res);
   });
+
+  app.use(express.static(path.join(__dirname, '/client/build')));
+
 };

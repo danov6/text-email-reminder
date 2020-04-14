@@ -18,7 +18,7 @@ let UserSchema = new Schema({
         required: [true, "Password cannot be blank"],
         minlength: [8, 'Password is too short']
     },
-    articles: [{
+    reminders: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Reminder'
     }]

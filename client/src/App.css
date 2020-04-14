@@ -17,7 +17,8 @@ input:active, input:focus{
   background-color: #fff;
   border-radius: 5px;
   width: 450px;
-  margin-top: 2%;
+  margin-top: 5%;
+  padding-bottom: 2%;
 }
 #login_container > * {
   justify-content: center;
@@ -46,6 +47,7 @@ input:active, input:focus{
   cursor: pointer;
   font-size: 1.2em;
   border: 1px solid #000;
+  width: 220px;
 }
 #account_controls > button:hover{
   background-color: #fff;
@@ -55,3 +57,9 @@ input:active, input:focus{
 #account_controls > button:active{
   outline: none;
 }
+/* .error_message{
+  background-color: #ffa2a2;
+  border-radius: 5px;
+  padding: 2% 4%;
+  border: 1px solid red;
+} */

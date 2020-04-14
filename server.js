@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 require('colors');
 
 app.use('/api', expressJwt({
-    secret: secret
+    secret
 }));
 
 //Authentication
@@ -22,15 +22,9 @@ let auth = require('./server/config/auth')(jwt, secret);
 require('./server/config/mongoose');
 
 //Routes
-require('./server/config/routes')(app,auth);
-
-//If production, uncomment
-//app.use(express.static(path.join(__dirname, '/client/build')));
-
-//If dev, comment
-app.use(express.static(path.join(__dirname, '/client')));
+require('./server/config/routes')(app, auth, path);
 
 //Listen
-app.listen(PORT, function() {
+app.listen(PORT, () => {
     console.log('App is listening on port ' + PORT);
 });
