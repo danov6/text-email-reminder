@@ -1,13 +1,17 @@
-var users = require('./auth.js/index.js.js');
+var users = require('./../controllers/user');
 
 // Define the routes
 module.exports = (app, auth, path) => {
-  // User routes
+  // Auth routes
   app.post('/signup', (req, res) => {
     auth.signup(req, res);
   });
   app.post('/login', (req, res) => {
     auth.login(req, res);
+  });
+  //User routes
+  app.get('/api/user', (req, res) => {
+    users.get(req, res);
   });
   // Reminder routes
   app.post('/api/add-reminder', (req,res) => {
