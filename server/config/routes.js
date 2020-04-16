@@ -1,4 +1,4 @@
-var users = require('./../controllers/user');
+var users = require('./../controllers/users');
 
 // Define the routes
 module.exports = (app, auth, path) => {
