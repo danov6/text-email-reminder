@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/danov6/react-node-boilerplate#readme",
   "dependencies": {
-    "aws-sdk": "^2.656.0",
+    "aws-sdk": "^2.814.0",
     "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
     "colors": "^1.4.0",
